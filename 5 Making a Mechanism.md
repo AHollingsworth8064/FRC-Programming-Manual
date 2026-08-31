@@ -37,8 +37,8 @@ Take our 2026 intake mechanism as an example.
 
 It's composed of two motors that work together to pick up and bring game pieces into the robot. Since they work together to bring game pieces into the robot, we control them with a single mechanism.  As a result, the rest of the code can work with the intake mechanism instead of both motors individually. 
 
-## IO vs KT
-Although a mechanisms seems like one piece of code, it actually has two different responsibilities: communicating with the components and deciding what the mechanisms should do.  While one file could be used for both jobs, it would make the code harder to read. Instead, we separate the responsibilities into an IO file and what we call a Kt file. 
+## IO vs Subsystem files
+Although a mechanism seems like one piece of code, it actually has two different responsibilities: communicating with the components and deciding what the mechanisms should do.  While one file could be used for both jobs, it would make the code harder to read. Instead, we separate the responsibilities into an IO file and what we call a Kt file. 
 
 >[!info]- Two Extra Benefits
 >- It makes it a lot easier to use AdvantageKit for logging and replaying matches 
