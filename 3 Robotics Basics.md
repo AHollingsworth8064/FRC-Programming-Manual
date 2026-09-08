@@ -211,7 +211,6 @@ Actually doing this in code is really easy. You just do this.
 @todo add actual examples. Take a look at the object detection code for a good example
 ```Kotlin
 
-//this is bs/ filler
 NT.newTopic("/Robot/Apple")
 ```
 
