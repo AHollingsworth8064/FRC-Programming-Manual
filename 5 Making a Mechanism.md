@@ -37,7 +37,7 @@ Take our 2026 intake mechanism as an example.
 
 It's composed of two motors that work together to pick up and bring game pieces into the robot. Since they work together to bring game pieces into the robot, we control them with a single mechanism.  As a result, the rest of the code can work with the intake mechanism instead of both motors individually. 
 
-## IO vs Subsystem files
+## IO vs Mechaism files
 Although a mechanism seems like one piece of code, it actually has two different responsibilities: communicating with the components and deciding what the mechanisms should do.  While one file could be used for both jobs, it would make the code harder to read. Instead, we separate the responsibilities into an IO file and what we call a Kt file. 
 
 >[!info]- Two Extra Benefits
@@ -324,6 +324,8 @@ class IntakeIOSim: IntakeIO {
 
 Sometime the mechanism we're trying to simulate is already done for us. Instead 
 ## KT example
+--------- Rewrite this once we do our architecture redesign
+
 Now you've seen the IO part that communicates with the hardware, it's time to see the Kt .
 
 ```Kotlin
@@ -417,22 +419,3 @@ These are commands. I won't get into until the `Commands` section, but for now, 
 ```
 The periodic method gets called once every robot cycle, so about 20ms. It is where we take the inputs from the IO and log them.
 
-%%
-1) IO vs Kt 
-	1) IO tells compoents how to move 
-	2) KT, controls the logic that determines what io should say
-2) Exmape IO
-	1) Io exmaple
-	2) Drop down, line by line break down
-	3) Activity write you own
-	4) Companion Object 
-3) Exmaple Kt
-	1) exmale
-	2) Drop down: line by line break down 
-	3) Activity, write you own
-4) SIm 
-	1) Sim IO 
-	2) Adding sim to both io and kt 
-	3) Running it 
-	4) line by line break down : drop down
-	
