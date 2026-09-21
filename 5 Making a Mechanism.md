@@ -40,10 +40,12 @@ It's composed of two motors that work together to pick up and bring game pieces 
 ## IO vs Mechaism files
 Although a mechanism seems like one piece of code, it actually has two different responsibilities: communicating with the components and deciding what the mechanisms should do.  While one file could be used for both jobs, it would make the code harder to read. Instead, we separate the responsibilities into an IO file and what we call a Kt file. 
 
->[!info]- Two Extra Benefits
->- It makes it a lot easier to use AdvantageKit for logging and replaying matches 
->- It makes simulating our robot a lot easier.
-
+<details> Two Extra Benefits
+	<summary>
+	>- It makes it a lot easier to use AdvantageKit for logging and replaying matches 
+	>- It makes simulating our robot a lot easier.
+	</summary>
+</details>
 The IO file is responsible for communicating with the components themselves. This means it tells them what to do and receives information about the component's current state, such as motor speed, motor position, etc.
 
 The Kt file is responsible for deciding what the mechanism should be doing. For example, let's say you pressed a button on a controller. The Kt file is the one that processes that input, and uses it to decide that the robot should raise its intake. To make this happen, the Kt file passes on the instructions about how the components should be have to the IO. Then the IO, passes on those instructions to the induvial components. 
@@ -90,11 +92,14 @@ interface IntakeIO {
 
 Sometimes when we need to test our code, we don't have the robot. So, instead we use a simulated robot. But the simulated robot doesn't have any physical hardware, so the `IntakeIOReal` won't work. Instead, we need to make another `IO` to allow our robot code to communicate with the simulated robot. However, we don't want the code inside of the `Kt` file to change just because we're simulating our robot. To solve this, we make an interface with the methods we want all of the `IO` classes to have. Then we make both classes implement it. This means both IO classes will have the same methods even if their code is different. This means the code inside of the `Kt` file can use either without caring if the robot is real or simulated.
 
->[!info]- What are interfaces 
->An interface is like a class, except it typically only has methods. The methods themselves don't contain code. Instead, each class that implements them provides the code for its version. 
->
->Think of an interface as a job description. Two people might have the same job description, but they go about doing their jobs in a completely different way. The job description still applies to them both, they're just doing their jobs differently. In the same way, two classes can implement the same interface but using different code. 
- 
+<details> What are interfaces 
+	<summary>
+	An interface is like a class, except it typically only has methods. The methods themselves don't contain code. Instead, each class that implements them provides the code for its version. 
+	
+	Think of an interface as a job description. Two people might have the same job description, but they go about doing their jobs in a completely different way. The job description still applies to them both, they're just doing their jobs differently. In the same way, two classes can implement the same interface but using different code. 
+	</summary>
+	
+</details>
 ```Kotlin
 class IntakeIOReal : IntakeIO {
 	//IntakeIOReal : IntakeIO, means it's implementing IntakeIO 
