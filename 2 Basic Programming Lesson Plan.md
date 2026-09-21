@@ -1,4 +1,5 @@
-<h1 align="center">Kotlin Introduction (with Java equivalents ) </h1>
+<h1 align="center">Kotlin Introduction (with Java equivalents)</h1>
+
 ## Before You Start 
 
 This only covers the programming concepts that I've frequently used in FRC programming.  Its goal is to build a strong foundation through a few hands-on activities and examples. However, it does not cover every single concept, as I plan on introducing more advanced topics when they're useful and/or as extra optional chapters if I have time.  
@@ -7,21 +8,44 @@ If you would like a more comprehensive introduction to Java, I would recommend c
 
 Since my team writes primarily in Kotlin, this is primarily written for Kotlin; however, I will put the Java 25 (what WPILib currently uses) equivalent code and explanation (when needed) behind a 
 
-> [!info]- Java Callout
-> This is where any Java-specific stuff will be 
+<details>
+	<summary>
+	 	Java Callout
+	</summary>
+	
+	This is where any Java-specific stuff will be 
+	
+</details>
 
-Similarly, I will be providing example code for how I would go about doing something using only the principles that were covered up to this point. If your version is different, that's fine - we each write code differently.
->[!note]- Example code
->```java
->IO.println("test")
->```
+Similarly, I will provide example code showing how I would do something using only the principles covered up to this point. If your version is different, that's fine - we each write code differently.
+<details>
+	<summary>
+		Example code
+	</summary>
+	
+	IO.println("test")	
+	
+</details>
 
-There are optional challenges you can do,  more in-depth explanations, or extra information behind the 
->[!info]- Optional Challenges
->This is where I would put the challenge
 
->[!info]- In-depth Explanations or extra information
->this is where I will put the in-depth Explanations 
+There are optional challenges you can do,  more in-depth explanations, or extra information behind the: 
+<details>
+	<summary>
+		Optional Challenges
+	</summary>
+
+	This is where I would put the challenge
+
+</details>
+
+<details> 
+	<summary>
+		In-depth Explanations or extra information
+	</summary>
+
+	This is where I will put the in-depth Explanations
+	
+</details>
 
 
 ## What are Programs
@@ -71,17 +95,22 @@ When you first create a Kotlin project with IntelliJ, the first thing you'll pro
 	}
 ``` 
 
->[!info]- Java Equivalent
->```java
->void main() {  
->	IO.println(String.format("Hello and welcome!"));
->	
->	for (int i = 1; i <= 5; i++) {
->		IO.println("i = " + i); 
->	}
->}
->```
+<details> 
+	<summary>
+		Java Equivalent
+	</summary>
 
+```java
+void main() {  
+	IO.println(String.format("Hello and welcome!"));
+	
+	for (int i = 1; i <= 5; i++) {
+		IO.println("i = " + i); 
+	}
+}
+```
+
+</details>
 
 You don't need to know what everything means; I'll cover that later. For now, just replace everything with this and run the code by clicking on the green arrow at the top of the screen.
 
