@@ -3,24 +3,24 @@ Before we can get to writing for the robot, we need to talk about safety. After 
 
 Most of the time, the robot is perfectly safe to work around. However, accidents can happen and sometimes people can be careless. So there are a few things to keep in mind whenever you're working with the robot.
 
-- Before **enabling** the robot (allowing it to run code), say **enabling** loud enough that those nearby know the robot could move at any moment 
-- If someone is working on the robot and/or trying to diagnose a mechanical error, do not enable the robot unless they tell you to. 
-- Whenever letting an inexperienced person drive, always cap the robot's speed
+- Before **enabling** the robot (allowing it to run code), say **"enabling"** loud enough that those nearby know the robot could move at any moment.
+- If someone is working on the robot and/or trying to diagnose a mechanical error, do not enable the robot unless they tell you to. Likewise, if the robot is enabled and someone is moving to touch it disable the robot unless they tell you otherwise.
+- Whenever letting an inexperienced person drive, always cap the robot's speed to a reasonable amount, and be ready to disable if they do something dumb.
 - Whenever testing autos (code that runs without human input), be prepared to disable the robot to stop it.
-- If you hear a grinding noise coming from the robot, stop testing and get someone from your Fabrication subteam (someone who assembles the robot)
-- Never assume the robot is disabled
-- Never put your hands into the robot when it's enabled
+- If you hear a grinding noise coming from the robot, stop testing and get someone from the Fabrication subteam (someone who assembles the robot)
+- Never assume the robot is disabled.
+- Never put your hands into the robot when it's enabled.
 - Wear proper PPE whenever the situation requires.
 
 
 ## Robot Components 
-Quick disclaimer, this won't include anything about pneumatics as my team don't use them 
+Quick disclaimer, this won't include anything about pneumatics as my team don't use them.
 
 >[!info]- Drivetrains
 >In FRC there are several different types of drivetrains, but most can be sorted into either:
 >>[!info]-  Swerve
 >>@todo add photo 
->>A swerve drive is typically made up of 4 different modules at each corner of the robot.  They are able to move independently of each other.
+>>A swerve drive is typically made up of 4 different modules at each corner of the robot. They are able to move independently of each other.
 >>
 >>@todo insert photo here of swerve chassis 
 >>
@@ -88,7 +88,6 @@ For each component on the CAN chain, we must assign it a CAN ID. Once that's don
 @todo  link to the indepth slideshow from the chickens
 
 ## Battery Voltage
-
 For the robot to move around, it requires an energy source. In FRC, we use 12-volt batteries. However, they don't last forever, so it's really important to keep an eye on the battery's voltage. If it were to drop too low, the robot's performance may start to decline and may eventually shut down. 
 
 ### Brownout 
@@ -120,9 +119,6 @@ All you need to do is plug an Ethernet cable into the DS port, then plug the oth
 
 ## Deploying Code 
 Once you've finished writing robot code, you need a way to transfer it to the robot. In FRC, we do this through a process known as deploying. But, before we can deploy code to the robot, make sure you either connected to the robots Wi-Fi or tethered to it. I personally recommend tethering as it's a lot faster.
-
-
-
 
 ### Installing WPILib
 If you haven't installed WPILib, then follow this [guide](@todo). It will help you install WPILib and get it working with IntelliJ. 
@@ -241,4 +237,3 @@ eg
 ```
 
 Now whenever the publisher updates @todo, @todo name will automatically receive the new value. So the next time you read from @todo, it will have the updated value.
-

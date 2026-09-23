@@ -28,7 +28,7 @@ Similarly, I will provide example code showing how I would do something using on
 </details>
 
 
-There are optional challenges you can do,  more in-depth explanations, or extra information behind the: 
+There are optional challenges you can do, more in-depth explanations, or extra information behind the: 
 <details>
 	<summary>
 		Optional Challenges
@@ -61,7 +61,7 @@ Cook mixture for 30 min at 400 degrees
 Output/result cake.
 ```
 
-However, unlike humans, computers will follow the instructions exactly as the program describes. So, for example, a human can understand "mix dry ingredients", but a computer won't know what it needs to mix, how long it should be mixed,  nor what should be used to mix it. Instead, we have to break it down into steps that it can understand.   So, "mix dry ingredients" becomes something like this:
+However, unlike humans, computers will follow the instructions exactly as the program describes. So, for example, a human can understand "mix dry ingredients", but a computer won't know what it needs to mix, how long it should be mixed, nor what should be used to mix it. Instead, we have to break it down into steps that it can understand. So, "mix dry ingredients" becomes something like this:
 
 ```text
 Grab flour  
@@ -78,7 +78,7 @@ Mix bowl contents for 3 minutes
 
 ## Installing An IDE
 
-Integrated Development Environments, or IDEs, are popular tools that allow programmers to write, debug, and run code within one application. You can use whichever one you want, but I've linked a guide to setting up IntelliJ for FRC since that is what I use. 
+Integrated Development Environments, or IDEs, are popular tools that allow programmers to write, debug, and run code within one application. You can use whichever one you want, but I've linked a guide to setting up IntelliJ for FRC since that is what I use (you should use this as well to ensure members of our team can work seamlessly together). 
 
 [How to Install and Set Up IntelliJ](@todo )
 
@@ -3836,6 +3836,8 @@ println(student1.school)
 
 ```
 This is because when a class inherits another, it takes it as a base. From there, the child class's fields and methods will be added on top, allowing us to access the fields and methods in the child and parent classes. 
+
+The technical term for the process of moving common functionality into a base-class is called *abstraction*. There is much debate in the programming community concerning when it is appropriate to utilize abstraction. It is a very powerful tool which when used correctly can greatly reduce the complexity of a codebase. But when used incorrectly, abstraction can actually greatly increase the complexity of a program, and make it harder to solve bugs. Thankfully, the places which abstraction should be used in robotics programming are fairly clear-cut.
 
 ### Override
 Sometimes we want a class to inherit from another, but we want its method to work a bit differently. Take the `printInfo()` method as an example, right now it will only print the name of the student, but it doesn't mention which school they attend. However, by overriding the method, we're able to create a custom version of `printInfo()` inside of `Student`.
