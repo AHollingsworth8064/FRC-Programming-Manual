@@ -5,6 +5,7 @@ But what would happen if you were working in a group on the same project? What i
  Well this is where git comes in. 
 
 [Here is the link to download git](https://git-scm.com/install/)
+
 ## What is git
 
 Git is a tool that keeps track of the changes to a project. This let's us save version of our code and  see what has changed. But how does Git keep track of changes? To understand this, we first must start with repositories, or repos for short.   
@@ -14,6 +15,7 @@ An **repository** is something that stores the current version of your code, and
 **GitHub** is a cloud based platform that allows users to store their repos. It allows you to access and update your repos across different devices at anytime. But first you have to make a GitHub account ([here is the link](@todo)). Once you made an account, I would advise you to read [this](https://docs.github.com/en/get-started/using-github/hello-world) since it shows you how to make repos. Importantly, GitHub is an entirely separate organization as Git. Git is a free, open source software project, whereas GitHub is a closed-source, for-profit subsidiary of Microsoft.
 
 You can choose to use Git from either the terminal or from IntelliJ. IntelliJ is more intuitive, but learning to use the terminal is a valuable skill that will be useful in virtually any software development environment. This page will be split up into two sections: Using Git from IntelliJ, and using Git from the terminal.
+
 ## Using Git from the terminal
 
 ### Cloning
@@ -68,7 +70,7 @@ Adding a bunch of files in this way can be tedious, and most of the time we want
 git add -A
 ```
 
-### `commit`-ing 
+### `commit`-ing
 
 Once your changes are staged, you can use the `commit` subcommand. A repository is made up a chain of commits going back all the way to the first commit. When you commit, you add to that chain. The reason staging and committing are separated is because you can stage multiple times before you commit, giving you control over what exactly goes into the commit history. 
 
@@ -94,89 +96,77 @@ Before you push all your changes to GitHub, you have to grab the changes other p
 Everything is probably going to be okay, but if you see the word `CONFLICT` on any of the lines, you're in trouble. 
 
 After you do pull successfully and fix all the conflicts, test the code again to make sure it works properly. In most cases it does, but sometimes other people's changes can mess up your changes. 
+
 ### `push`-ing
 
 At long last, you can push your changes to GitHub. Simply type `git push` and hit enter. You have now learned 90% of the Git process. Now, you can begin learning the final 90% of the Git process.
 
-### `branch`-ing
-
-So far, we have thought of the Git history as a single chain of commits. In reality, the history can be much more complicated. Any commit can be branched off into two separate "branches", and any commit can be formed as the merger of two branches.  Here is an image that will help you visualize branches:
-
-![[Pasted image 20260925114044.png]]
-
-IntelliJ makes it very convenient to switch between branches, so we'll focus more on how branches work than on making and switching between them. 
-
-Every repository has a base branch, from which all other branches sprout. What your base branch is called can say a lot about you:
-
-- Main: You are an NPC and just like everyone else.
-- Master: You are afraid of being woke, but also still an NPC.
-- Trunk: You are cool, understand git, and probably have facial hair the size of Karl Marx.
 ## Using Git from IntelliJ
 
 Once you have a repository on GitHub, you need to a way to get it onto your computer. To do this, we do something called **cloning**. Cloning is when we make a copy of the repo on our own computer.
 
->[!info]- Cloning In IntelliJ
->@todo make a gif 
+> [!info]- Cloning In IntelliJ
+> @todo make a gif 
 
 Once you have it cloned, you can start editing the code in what ever IDE you want. Once you want to save you changes to remote repo (the one stored in GitHub), you need to **stage** the changes. This is just telling git that you want the changes made to these files to be included when you commit.
 
->[!info]- Staging Changes Using Terminal
->I personally recommend using your IDE's built in git tools since they tend to be simpler to use. However, if you really want to use terminal, I'll link resources for each step of this process.
-> 
+> [!info]- Staging Changes Using Terminal
+> I personally recommend using your IDE's built in git tools since they tend to be simpler to use. However, if you really want to use terminal, I'll link resources for each step of this process.
+
  [Staging Changes](https://www.geeksforgeeks.org/git/staging-in-git/)
 
->[!info]- Staging Changes Using IntelliJ 
->Stage changes with IntelliJ is really easly
->@todo add gif
+> [!info]- Staging Changes Using IntelliJ 
+> Stage changes with IntelliJ is really easly
+> @todo add gif
 
 Once the changes have been staged, the next step is to **commit**. Although it's name might seem intimidating, it just mean you're saving the changes in the local repo. 
- 
 
->[!info]- Commit Using Terminal
->[Commiting](https://www.w3schools.com/git/git_commit.asp)
+> [!info]- Commit Using Terminal
+> [Commiting](https://www.w3schools.com/git/git_commit.asp)
 
->[!info]- Commit Using IntelliJ
->@todo
+> [!info]- Commit Using IntelliJ
+> @todo
 
 One important part of a committing is writing the commit message. Since it is meant to tell other, and possibly your future self, what changed. Since, without it, people would have to manual look through the changes. 
 
 Anyways, once you committed something, the changes are only saved locally.  To save the changes to the remote repo, you must **push** the changes. 
 
->[!info]- Pushing Using Terminal
->[Pushing](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)
+> [!info]- Pushing Using Terminal
+> [Pushing](https://docs.github.com/en/get-started/using-git/pushing-commits-to-a-remote-repository)
 
->[!info]- Pushing Using IntelliJ
->@todo
+> [!info]- Pushing Using IntelliJ
+> @todo
 
 Once you push changes, the remote repo will update.. To get these new changes, we do something called **pulling**. This process download the committed changes from the remote repo onto your current local repo. 
 
->[!info]- Pulling Using Terminal
->[Pulling](https://www.w3schools.com/git/git_pull_from_remote.asp?remote=github)
+> [!info]- Pulling Using Terminal
+> [Pulling](https://www.w3schools.com/git/git_pull_from_remote.asp?remote=github)
 
->[!info]- Pulling Using IntelliJ
->@todo
+> [!info]- Pulling Using IntelliJ
+> @todo
 
 But what do you think would happen if two people who changed the same file pushed their changes? Usually git will automatically handle it, but if both commits have contradicting elements - such as one commit deleted something, while the other kept that thing -, then a merge conflict will happen.  This means you have to manually go through the changes and decide what to keep. To help avoid this headache, we use something called **branches**. 
 
 **Branches** are independent workspaces. If you think of  `main`  as the main save file. Then a branches are like separate save files where you try out new things without impacting your main save. This means, we can  edit, change, commit, etc. branches  without impacting the `main` branch. 
 
->[!info]- Branches Using Terminal
->[Branches](https://www.w3schools.com/git/git_branch.asp?remote=github)
+> [!info]- Branches Using Terminal
+> [Branches](https://www.w3schools.com/git/git_branch.asp?remote=github)
 
->[!info]- Branches with IntelliJ
->@todo
+> [!info]- Branches with IntelliJ
+> @todo
 
 %%
+
 1) what and why we use git 
-	1) Wokring with group similtalicy = hard
+   1) Wokring with group similtalicy = hard
 2) repos 
-	1) Where projects are held
+   1) Where projects are held
 3) clones
-	1) Geting a repo 
+   1) Geting a repo 
 4) commit and push
-	1) IDK 
-	2) State in dropdown 
-	3)
+   1) IDK 
+   2) State in dropdown 
+      3)
 5) pull 
 6) branches
 7) pull requests
