@@ -2,7 +2,7 @@
 
 ## Before You Start 
 
-This only covers the programming concepts that I've frequently used in FRC programming.  Its goal is to build a strong foundation through a few hands-on activities and examples. However, it does not cover every single concept, as I plan on introducing more advanced topics when they're useful and/or as extra optional chapters if I have time.  
+This only covers the programming concepts that I've frequently used in FRC programming. Its goal is to build a strong foundation through a few hands-on activities and examples. However, it does not cover every single concept, as I plan on introducing more advanced topics when they're useful and/or as extra optional chapters if I have time.  
 
 If you would like a more comprehensive introduction to Java, I would recommend checking out [Bro Code's YouTube video](https://www.youtube.com/watch?v=xTtL8E4LzTQ), [Code Academy's free Java course](https://www.codecademy.com/learn/learn-java), or [JetBrains' Java courses](https://lp.jetbrains.com/academy/learn-java/). 
 
@@ -17,7 +17,7 @@ Since my team writes primarily in Kotlin, this is primarily written for Kotlin; 
 	
 </details>
 
-Similarly, I will provide example code showing how I would do something using only the principles covered up to this point. If your version is different, that's fine - we each write code differently.
+Similarly, I will provide example code showing how I would do something using only the principles covered up to this point. If what you would write is different, that's fine - we each write code differently.
 <details>
 	<summary>
 		Example code
@@ -26,7 +26,6 @@ Similarly, I will provide example code showing how I would do something using on
 	IO.println("test")	
 	
 </details>
-
 
 There are optional challenges you can do, more in-depth explanations, or extra information behind the: 
 <details>
@@ -999,14 +998,16 @@ When you pass something into a function, Kotlin creates `val` for it. This means
 
 So something like this won't work :
 ```Kotlin
-fun addOne(num1 : Int) : Int{
-	return num1 = num1 + 1// Creates an error
+fun addOne(num1 : Int): Int {
+  num1 = num1 + 1 // Here would be an error, we can't reassign to num1.
+	return num1
 }
 ```
 
-Instead you could do something like this
+Instead you could do something like this:
+
 ```Kotlin
-fun addOne(num1: Int) : Int{
+fun addOne(num1: Int): Int {
 	var num = num1 + 1
 	return num
 }
@@ -1014,7 +1015,7 @@ fun addOne(num1: Int) : Int{
 This works because function parameters are read only. So if you want a modified version of a parameter, you'll need to create a new variable for it.  
 
 ### Returning Values 
-So far, the functions I've shown were passed information. However, functions can send back information using a `return`. However, whenever you `return` something, the function stops running.
+So far, the functions I've shown were passed information. However, functions can send back information using a `return`. However, whenever you `return` something, the function stops running (it "exits").
 
 Here is an updated version of `whichIsBigger` that returns the bigger number.
 ```Kotlin
@@ -1125,7 +1126,6 @@ In the second example, `name` is created just inside of `main`. Since, the `if` 
 >```
 >This is because Java determines which overloaded method to call based on the number and types of the parameters. However, both functions above have the exact same parameters, so Java can't tell them apart. 
 >
-
 
 ## Activity 5
 Take a look back at your greeter code, doesn't it seem a bit messy? How about we clean it up by adding in functions.

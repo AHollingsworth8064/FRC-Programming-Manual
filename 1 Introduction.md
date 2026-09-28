@@ -25,7 +25,7 @@ In Teleop, the driver controls the robot, so inputs, like moving a joystick, are
 
 ## What a Typical Build Season Looks Like
 
-A typical build season starts with a team brainstorming session right after kickoff. This gives our team time to understand the game and decide what we want our robot to be capable of. By the next meeting, our CAD team usually has a general idea of what mechanisms the robot will have.  After a meeting with the CAD team, we divvy up the different mechanisms and start writing code for them (one of the challenges here is that we don't fully know what the mechanisms will look like). 
+A typical build season starts with a team brainstorming session right after kickoff. This gives our team time to understand the game and decide what we want our robot to be capable of. By the next meeting, our CAD team usually has a general idea of what mechanisms the robot will have. After a meeting with the CAD team, we divvy up the different mechanisms and start writing code for them (one of the challenges here is that we don't fully know what the mechanisms will look like). 
 
 Once the initial code is written, we either spend time training new people, testing code logic with a simulated robot, or working on non-essential projects like object detection while the robot is being built. Once the robot is assembled, we move onto our busiest time of year. From that point onwards, we begin debugging our code with a physical robot, tuning subsystems so they behave how we want, and writing autos. Because of this, programming has a unique vibe—we spend a lot of the year without much urgent work to do, but when the robot is built the work becomes urgent and highly integrated with other subteams.
 
