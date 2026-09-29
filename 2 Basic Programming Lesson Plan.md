@@ -430,27 +430,28 @@ no, okay John, follow me to your table for 5
 >>}
 >>```
 
->[!info]- Naming Conventions
->Imagine you're working on a project where everyone named their variables differently. So something as simple as party size could look like: 
->```Kotlin
->var partysize = 3
->var Partysize = 3
->var PartySize = 3 
->var partySize = 3
->var numberofpeople = 3
->```
->Sure, all of them work, but some of them can be harder to read since some of the words blur together: 
->```Kotlin
->var partysize = 3
->```
->On the other hand, `partySize` is much easier to read since you can clearly see both words.
->
-To make code easier to read and consistent, Kotlin and Java programmers tend to use camelCase. This means the first word starts lowercase, and any additional words start with an uppercase letter.  As a result, it is far easier to tell where one word ends and the next begins. 
->
-So party size becomes :
->```Kotlin
+### Naming Conventions
+
+Imagine you're working on a project where everyone named their variables differently. So something as simple as party size could look like: 
+```Kotlin
+var partysize = 3
+var Partysize = 3
+var PartySize = 3 
 var partySize = 3
->```
+var numberofpeople = 3
+```
+Sure, all of them work, but some of them can be harder to read since some of the words blur together: 
+```Kotlin
+var partysize = 3
+```
+On the other hand, `partySize` is much easier to read since you can clearly see both words.
+
+To make code easier to read and consistent, Kotlin and Java programmers tend to use camelCase. This means the first word starts lowercase, and any additional words start with an uppercase letter.  As a result, it is far easier to tell where one word ends and the next begins. 
+
+So party size becomes:
+```Kotlin
+var partySize = 3
+```
 
 ## Conditional
 Up until now, the program has been following the same path no matter what the user types. However, real programs often need to make decisions. For example, if the greeter asks "May I take your coat?", their response should be different depending on  whether the user answers `"yes"` or `"no"`.
@@ -3949,6 +3950,15 @@ If you don't know what to make, here are a few ideas
 >- If you want to make an android app, [here is a website to help with that.](https://developer.android.com/courses/android-basics-compose/course)
 >- If you want to make a game with visuals, [I would recommend taking a look at this](https://www.geeksforgeeks.org/blogs/kotlin-for-game-development/#2-choose-the-right-game-engine)  
 
+## Type Inference
+
+All variables or values in Kotlin must have a specified type (such as Int or Subsystem). So far in this book we have explicitly specified the type of variables:
+
+``` kotlin
+val x: Int = 1
+```
+
+In Java it is required that you specify the type of the variable. But Kotlin is smart and can 
 
 ## others no activity
 %%
