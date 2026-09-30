@@ -1,4 +1,4 @@
-Robot code tends to be big and without any means of organization, it becomes really hard to navigate. Take, for example, our team's 2026 code without any folders.
+Robot code tends to be big, and without any means of organization it becomes really hard to navigate. Take, for example, our team's 2026 code without any folders (called packages in Java and Kotlin).
 
 @todo screenshot of project without any folders >:)
 
@@ -168,5 +168,4 @@ To help explain how our team's (3636) code is organized, I've made an interactiv
 >>This file checks for any problems with the robot. If there is one, it will display an alert on the Driver Station.
 >
 >>[!note]- `Main.kt`
->> This is the first file that gets run. Inside it is where we create an instance of the robot and get the robot code running. 
-
+>> This is the first file that gets run. Inside it is where we create an instance of the robot and get the robot code running.
